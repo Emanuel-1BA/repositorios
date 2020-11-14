@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<!-- this script got from www.javascriptfreecode.com coded by: Kerixa Inc. -->
+<style>
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(16, 16, 16, 0.8), rgba(16, 16, 16, 0.8)), url(https://www.javascriptfreecode.com/uploads/pictures/26-1.jpg);
+  background-size: cover;
+}
+
+p {
+  margin: 0em 5em 4em 5em;
+}
+
+h1, p {
+  text-align: left;
+  line-height: 1.8;
+  font-family: Lora, serif;
+}
+
+.glowIn {
+  color: white;
+}
+.glowIn span {
+  animation: glow-in 0.8s both;
+}
+
+@keyframes glow-in {
+  from {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+    text-shadow: 0 0 25px white;
+  }
+  75% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+</style>
+<h1 class="glowIn">Gracias por leer</h1>
+<p class="glowIn">esta es mi pagina web
+con mis archivos de evidencias 
+aquie mostrare lo que valla aciendo 
+espero y le guste 
+ya que soy nuevo en esto 
+cualquier mejora 
+mande mensaje 
+gracias.</p>
+
+<script>
+"use strict";
+var glowInTexts = document.querySelectorAll(".glowIn");
+glowInTexts.forEach(function (glowInText) {
+  var letters = glowInText.textContent.split("");
+  glowInText.textContent = "";
+  letters.forEach(function (letter, i) {
+    var span = document.createElement("span");
+    span.textContent = letter;
+    span.style.animationDelay = i * 0.05 + "s";
+    glowInText.append(span);
+  });
+});
+</script><a target='_blank' href='http://www.javascriptfreecode.com/' style='font-size: 8pt; text-decoration: none'>JavaScript Codes</a>
+</body>
+</html>
